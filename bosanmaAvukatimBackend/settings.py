@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'zk&7q^gn6p_5arjekwl)711&tb3udt1@slf%3=!x=sc5@@vf@c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['142.93.170.96', 'api.bosanmavukatim.com']
 
 
 # Application definition
@@ -82,9 +82,13 @@ WSGI_APPLICATION = 'bosanmaAvukatimBackend.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'bosanmaavukatimdatabase',
+        'USER': 'bosanmaavukatimdatabaseuser',
+        'PASSWORD': 'berk693693',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -111,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'tr-tr'
 
 TIME_ZONE = 'UTC'
 
